@@ -2,6 +2,8 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://accounts.google.com https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://www.googleapis.com; frame-src https://accounts.google.com https://docs.google.com https://drive.google.com; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DROP.NORYX | Estilo que se destaca</title>
 <meta name="theme-color" content="#02060d">
@@ -181,14 +183,14 @@ html{scroll-padding-top:110px}
 <section id="contato" style="padding:0 0 44px"><div class="wrap"><div class="cta">
 <h2>Mais que uma loja, é estilo.</h2>
 <p>Tem dúvida ou quer um produto específico? Chame no WhatsApp e responderemos o quanto antes.</p>
-<a class="btn lg" id="wa" target="_blank" rel="noopener" href="#">Chamar no WhatsApp</a>
+<a class="btn lg" id="wa" target="_blank" rel="noopener noreferrer" href="#">Chamar no WhatsApp</a>
 </div></div></section>
 </main>
 <div class="ov hide" id="cartOv"><div class="sheet" id="cartBox"></div></div><div class="toast" id="toast"></div>
-<a class="wf" id="wf" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/><path fill="#25d366" d="M8.6 7.2c-.4.3-.8.9-.7 1.800.2 1.800 1.600 3.800 3.300 5 1.200.9 2.600 1.300 3.500 1.100.8-.2 1.300-.9 1.300-1.300 0-.2-.1-.3-.3-.4l-1.500-.7c-.2-.1-.4 0-.5.100l-.5.600c-.1.100-.3.200-.5.100-.9-.4-1.700-1-2.300-1.900-.1-.2-.1-.3 0-.5l.4-.5c.1-.1.1-.3.100-.4l-.7-1.600c-.1-.2-.4-.3-.6-.3z"/></svg></a>
+<a class="wf" id="wf" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/><path fill="#25d366" d="M8.6 7.2c-.4.3-.8.9-.7 1.800.2 1.800 1.600 3.800 3.300 5 1.200.9 2.600 1.300 3.500 1.100.8-.2 1.300-.9 1.300-1.300 0-.2-.1-.3-.3-.4l-1.500-.7c-.2-.1-.4 0-.5.100l-.5.600c-.1.100-.3.200-.5.100-.9-.4-1.700-1-2.300-1.900-.1-.2-.1-.3 0-.5l.4-.5c.1-.1.1-.3.100-.4l-.7-1.600c-.1-.2-.4-.3-.6-.3z"/></svg></a>
 <footer><div class="wrap">
 <div class="ftag">Estilo que se destaca</div>
-<div class="hb" id="soc"><a class="btn sm ghost" href="https://www.instagram.com/drop.noryx" target="_blank" rel="noopener">Instagram @drop.noryx</a><a class="btn sm ghost" href="https://www.tiktok.com/@drop.noryx" target="_blank" rel="noopener">TikTok @drop.noryx</a></div>
+<div class="hb" id="soc"><a class="btn sm ghost" href="https://www.instagram.com/drop.noryx" target="_blank" rel="noopener noreferrer">Instagram @drop.noryx</a><a class="btn sm ghost" href="https://www.tiktok.com/@drop.noryx" target="_blank" rel="noopener noreferrer">TikTok @drop.noryx</a></div>
 <div class="ft" id="ft" style="margin-top:22px"></div>
 <div id="cp" style="padding-bottom:12px">© 2026 DROP.NORYX. Todos os direitos reservados.</div>
 </div></footer>
@@ -217,7 +219,7 @@ html{scroll-padding-top:110px}
 </aside>
 <main id="admMain"><div class="tb"><h2 id="admT"></h2><span id="admU" class="sub" style="margin:0"></span></div><div id="admBody"></div></main>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 function showErr(m){var b=document.getElementById("errB");if(!b){b=document.createElement("div");b.id="errB";b.style.cssText="position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:99;background:#3a0d14;color:#ffd5da;border:1px solid #ff7b8a;border-radius:10px;padding:10px 12px;font:13px/1.4 monospace;word-break:break-word";b.onclick=function(){b.remove()};document.body.appendChild(b)}b.textContent="Erro: "+m+" (toque para fechar)"}
 window.onerror=function(m,u,l){showErr(m+" [linha "+l+"]")};
@@ -239,7 +241,7 @@ function waLink(t){return "https://wa.me/"+S.wa+"?text="+encodeURIComponent(t)}
 function cats(){var c=S.cfg&&S.cfg.categories;c=Array.isArray(c)?c.filter(Boolean):[];return c.length?c:["Eletrônicos","Roupas","Tênis","Acessórios","Perfumes","Casa","Diversos"]}
 function allCats(){var a=cats().slice();S.prods.forEach(function(p){if(a.indexOf(p.category)<0)a.push(p.category)});return a}
 function nz(t){return(t||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
-function card(p){return h("div",{cls:"card"},p.image_url?h("img",{src:p.image_url,alt:p.name,loading:"lazy"}):h("div",{cls:"ph",text:p.category.charAt(0).toUpperCase()}),h("small",{text:p.category}),h("h3",{text:p.name}),p.description?h("span",{text:p.description}):null,h("strong",{text:R(p.price)}),h("button",{cls:"btn sm fill",text:"Adicionar ao carrinho",onclick:function(){addCart(p)}}),h("button",{cls:"btn sm ghost",text:"Comprar no WhatsApp",onclick:function(){checkout([{p:p,q:1}],{link:p.link})}}))}
+function card(p){return h("div",{cls:"card"},lk(p.image_url)?h("img",{src:p.image_url,alt:p.name,loading:"lazy"}):h("div",{cls:"ph",text:p.category.charAt(0).toUpperCase()}),h("small",{text:p.category}),h("h3",{text:p.name}),p.description?h("span",{text:p.description}):null,h("strong",{text:R(p.price)}),h("button",{cls:"btn sm fill",text:"Adicionar ao carrinho",onclick:function(){addCart(p)}}),h("button",{cls:"btn sm ghost",text:"Comprar no WhatsApp",onclick:function(){checkout([{p:p,q:1}],{link:p.link})}}))}
 function render(){
 $("wa").href=waLink("Olá! Vim pelo site da "+((S.cfg&&S.cfg.store_name)||"DROP.NORYX")+" e quero fazer um pedido.");$("wf").href=$("wa").href;
 var nv=$("cnav");nv.innerHTML="";
@@ -268,7 +270,7 @@ var b=$("cartBox"),it=cartItems(),tot=0;b.innerHTML="";
 b.appendChild(h("div",{style:"display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"},h("h3",{text:"Seu carrinho",style:"margin:0"}),h("button",{cls:"btn sm ghost",text:"✕",onclick:closeCart})));
 if(!it.length){b.appendChild(h("p",{cls:"sub",text:"Seu carrinho está vazio."}));b.appendChild(h("button",{cls:"btn fill",text:"Continuar comprando",onclick:closeCart}));return}
 it.forEach(function(i){tot+=i.p.price*i.q;
-b.appendChild(h("div",{cls:"ci"},i.p.image_url?h("img",{src:i.p.image_url,alt:""}):h("div",{cls:"ph",text:i.p.category.charAt(0).toUpperCase()}),
+b.appendChild(h("div",{cls:"ci"},lk(i.p.image_url)?h("img",{src:i.p.image_url,alt:""}):h("div",{cls:"ph",text:i.p.category.charAt(0).toUpperCase()}),
 h("div",{},h("b",{text:i.p.name}),h("div",{cls:"sub",style:"margin:2px 0 8px;font-size:13px",text:R(i.p.price)+" cada"}),
 h("div",{style:"display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap"},h("div",{cls:"qs"},h("button",{text:"−",onclick:function(){qty(i.p.id,-1)}}),h("b",{text:String(i.q)}),h("button",{text:"+",onclick:function(){qty(i.p.id,1)}})),h("strong",{text:R(i.p.price*i.q)})),
 h("button",{cls:"lnk",text:"Remover",onclick:function(){qty(i.p.id,-99)}}))))});
@@ -285,7 +287,7 @@ var tot=0,ls=items.map(function(i){tot+=i.p.price*i.q;return "• "+i.q+"x "+i.p
 var c=S.cfg||{},intro=(c.wa_message&&c.wa_message.indexOf("{produto}")<0?c.wa_message:"Olá! Vim pela {loja} e quero fazer um pedido:").replace(/\{loja\}/g,c.store_name||"DROP.NORYX");
 var u=lk(o.link)?o.link:waLink(intro+" (Pedido #"+code+")\n\n"+ls.join("\n")+"\n\nTotal: "+R(tot));
 if(o.cart){CART=[];saveCart();cartUI();closeCart()}
-if(w)w.location=u;else location.href=u}
+if(w){try{w.opener=null}catch(e){}w.location=u}else location.href=u}
 function head(){$("who").textContent=S.user?"Olá, "+(S.name||S.user.email.split("@")[0]).split(" ")[0]:"";$("bIn").classList.toggle("hide",!!S.user);$("bUp").classList.toggle("hide",!!S.user);$("bOut").classList.toggle("hide",!S.user);$("bAdm").classList.toggle("hide",!S.admin)}
 async function setUser(u){S.user=u||null;S.admin=false;S.name="";
 if(u){var r=await SB.from("profiles").select("name,is_admin").eq("id",u.id).maybeSingle();if(r.data){S.admin=!!r.data.is_admin;S.name=r.data.name||""}}head()}
@@ -331,8 +333,31 @@ var CL=["#4fe3ff","#3ddc97","#ffc857","#b48cff","#ff7b8a"],PQ="",PF="all",OF="al
 function closeAdm(){$("adm").classList.remove("open");document.body.style.overflow="";cpop()}
 $("admX").onclick=closeAdm;
 $("admOut").onclick=function(){closeAdm();$("bOut").onclick()};
-$("bAdm").onclick=async function(){try{if(!S.admin){showErr("sua conta não é admin");return}AT="res";$("adm").classList.add("open");document.body.style.overflow="hidden";await admLoad()}catch(e){showErr(e.message)}};
-async function admLoad(){try{await autoClean()}catch(e){}var a=await SB.from("orders").select("*").order("created_at",{ascending:false}).limit(1000),b=await SB.from("products").select("*").order("created_at",{ascending:false});if(a.error||b.error)showErr((a.error||b.error).message);AD.o=a.data||[];AD.p=b.data||[];admView()}
+/* ---- SEGURANCA: MFA (TOTP) obrigatorio para o painel ADM + expiracao por inatividade ---- */
+function mfaAsk(qr,secret){return new Promise(function(done){var inp=h("input",{inputmode:"numeric",autocomplete:"one-time-code",maxlength:"6",placeholder:"000000"}),m=h("div",{cls:"msg"}),ov=h("div",{cls:"modal open",style:"z-index:90"});
+function fin(v){ov.remove();done(v)}
+ov.appendChild(h("div",{cls:"box"},h("h3",{text:"Verificação em duas etapas",style:"margin:0 0 8px"}),
+h("p",{cls:"sub",style:"font-size:14px;margin:0 0 10px",text:qr?"Escaneie o QR no app autenticador (Google Authenticator, Authy…) e digite o código de 6 dígitos.":"Digite o código de 6 dígitos do seu app autenticador."}),
+qr?h("img",{src:qr,alt:"QR code",style:"width:180px;height:180px;background:#fff;border-radius:10px;display:block;margin:0 auto 8px"}):null,
+secret?h("p",{cls:"sub",style:"font-size:12px;word-break:break-all;margin:0 0 8px",text:"Chave manual: "+secret}):null,
+inp,m,h("div",{cls:"row"},h("button",{cls:"btn fill",text:"Confirmar",onclick:function(){var c=inp.value.replace(/\D/g,"");if(c.length!=6){m.textContent="Digite os 6 dígitos.";return}fin(c)}}),h("button",{cls:"btn ghost",text:"Cancelar",onclick:function(){fin(null)}}))));
+document.body.appendChild(ov);inp.focus()})}
+async function mfaGate(){var a=await SB.auth.mfa.getAuthenticatorAssuranceLevel();if(a.error){showErr(a.error.message);return false}
+if(a.data.currentLevel=="aal2")return true;
+var fl=await SB.auth.mfa.listFactors(),all=(fl.data&&fl.data.totp)||[],ok=all.filter(function(x){return x.status=="verified"})[0],fid,qr=null,sec=null;
+if(ok)fid=ok.id;else{for(var i=0;i<all.length;i++)await SB.auth.mfa.unenroll({factorId:all[i].id});
+var en=await SB.auth.mfa.enroll({factorType:"totp",friendlyName:"Drop.Noryx admin "+Date.now()});if(en.error){showErr(en.error.message);return false}
+fid=en.data.id;qr=en.data.totp.qr_code;sec=en.data.totp.secret}
+var code=await mfaAsk(qr,sec);if(!code)return false;
+var ch=await SB.auth.mfa.challenge({factorId:fid});if(ch.error){showErr(ch.error.message);return false}
+var vr=await SB.auth.mfa.verify({factorId:fid,challengeId:ch.data.id,code:code});if(vr.error){showErr("Código incorreto.");return false}
+return true}
+var IDLE=null;function admIdle(){clearTimeout(IDLE);IDLE=setTimeout(async function(){if(!$("adm").classList.contains("open"))return;closeAdm();toast("Sessão do painel expirada");try{await SB.auth.signOut();await setUser(null)}catch(e){}},30*60*1000)}
+["pointerdown","keydown","scroll"].forEach(function(ev){$("adm").addEventListener(ev,function(){if($("adm").classList.contains("open"))admIdle()},{passive:true})});
+$("bAdm").onclick=async function(){try{if(!S.admin){showErr("sua conta não é admin");return}if(!(await mfaGate()))return;AT="res";$("adm").classList.add("open");document.body.style.overflow="hidden";admIdle();await admLoad()}catch(e){showErr(e.message)}};
+var HID=[];try{HID=JSON.parse(localStorage.getItem("hidOrd")||"[]")}catch(e){}
+function hideOrd(ids){ids.forEach(function(i){if(HID.indexOf(i)<0)HID.push(i)});try{localStorage.setItem("hidOrd",JSON.stringify(HID))}catch(e){}}
+async function admLoad(){try{await autoClean()}catch(e){}var a=await SB.from("orders").select("*").order("created_at",{ascending:false}).limit(1000),b=await SB.from("products").select("*").order("created_at",{ascending:false});if(a.error||b.error)showErr((a.error||b.error).message);AD.o=(a.data||[]).filter(function(o){return HID.indexOf(o.id)<0});AD.p=b.data||[];admView()}
 function admView(){var v=$("admBody");v.innerHTML="";document.querySelectorAll("[data-at]").forEach(function(b){b.classList.toggle("on",b.dataset.at==AT)});
 $("admT").textContent={res:"Visão geral",prd:"Produtos",ped:"Pedidos",cfg:"Configurações"}[AT];$("admU").textContent=S.name?"Olá, "+S.name.split(" ")[0]:"";
 ({res:viewRes,prd:viewPrd,ped:viewPed,cfg:viewCfg})[AT](v);$("admMain").scrollTop=0}
@@ -379,9 +404,18 @@ tb.appendChild(h("tr",{},h("td",{},h("div",{cls:"nm"},x.image_url?h("img",{src:x
 t.appendChild(tb);w.appendChild(t)}
 tbl()}
 async function togg(x){var r=await SB.from("products").update({active:!x.active}).eq("id",x.id);if(r.error){showErr(r.error.message);return}await admLoad();loadProducts()}
-function askC(msg){return new Promise(function(ok){var ov=h("div",{style:"position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;padding:16px"},h("div",{cls:"box",style:"max-width:360px"},h("p",{text:msg,style:"margin:0 0 16px;font-size:16px;line-height:1.4"}),h("div",{cls:"row",style:"margin-top:0"},h("button",{cls:"btn sm danger",text:"Excluir",onclick:function(){ov.remove();ok(true)}}),h("button",{cls:"btn sm ghost",text:"Cancelar",onclick:function(){ov.remove();ok(false)}}))));document.body.appendChild(ov)})}
-var RLS_MSG="O banco recusou a exclusão (nenhuma linha foi apagada). No Supabase, abra SQL Editor e crie a permissão de exclusão para o admin (ex.: create policy \"admin delete\" on public.TABELA for delete using (exists (select 1 from public.profiles where id = auth.uid() and is_admin));).";
-async function delPrd(x){if(!(await askC("Excluir "+x.name+"?")))return;var r=await SB.from("products").delete().eq("id",x.id).select("id");if(r.error){showErr(r.error.message);return}if(!r.data||!r.data.length){showErr(RLS_MSG.replace("TABELA","products"));return}toast("Produto excluído");await admLoad();loadProducts()}
+function askC(msg,okT,noT){return new Promise(function(ok){var ov=h("div",{style:"position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:16px"},h("div",{cls:"box",style:"max-width:380px"},h("p",{text:msg,style:"margin:0 0 16px;font-size:16px;line-height:1.4"}),h("div",{cls:"row",style:"margin-top:0"},h("button",{type:"button",cls:"btn sm danger",text:okT||"Excluir",onclick:function(){ov.remove();ok(true)}}),h("button",{type:"button",cls:"btn sm ghost",text:noT||"Cancelar",onclick:function(){ov.remove();ok(false)}}))));document.body.appendChild(ov)})}
+function failBox(title,msg,sql,ex){var ta=sql?h("textarea",{rows:"7",readonly:"readonly",style:"font:12px/1.4 monospace;margin-top:10px",value:sql}):null;
+var ov=h("div",{style:"position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;padding:16px"},h("div",{cls:"box",style:"max-width:520px"},h("h3",{text:title,style:"margin:0 0 8px;color:var(--er)"}),h("p",{text:msg,style:"margin:0;font-size:14px;line-height:1.5"}),ta,
+h("div",{cls:"row"},sql?h("button",{type:"button",cls:"btn sm fill",text:"Copiar SQL",onclick:function(){ta.select();try{navigator.clipboard.writeText(sql)}catch(e){try{document.execCommand("copy")}catch(e2){}}toast("SQL copiado")}}):null,ex?h("button",{type:"button",cls:"btn sm fill",text:ex.text,onclick:function(){ov.remove();ex.fn()}}):null,h("button",{type:"button",cls:"btn sm ghost",text:"Fechar",onclick:function(){ov.remove()}}))));document.body.appendChild(ov)}
+function sqlDel(t){return 'drop policy if exists "admin apaga '+t+'" on public.'+t+';\ncreate policy "admin apaga '+t+'" on public.'+t+' for delete to authenticated\nusing (exists (select 1 from public.profiles p where p.id = auth.uid() and p.is_admin));'}
+var SQL_FK='alter table public.orders alter column product_id drop not null;\nalter table public.orders drop constraint if exists orders_product_id_fkey;\nalter table public.orders add constraint orders_product_id_fkey foreign key (product_id) references public.products(id) on delete set null;';
+async function delPrd(x){if(!(await askC("Excluir "+x.name+"?")))return;
+var r=await SB.from("products").delete({count:"exact"}).eq("id",x.id);
+if(r.error||!r.count){var fk=r.error&&(r.error.code=="23503"||/foreign key/i.test(r.error.message||"")),why=fk?"Este produto já está ligado a pedidos, e o banco não deixa apagar.":(r.error?"Erro do banco: "+r.error.message:"O banco não permitiu apagar (falta a permissão de exclusão).");
+if(await askC(why+" Quer ocultar da loja em vez de excluir?","Ocultar da loja","Não")){var u=await SB.from("products").update({active:false}).eq("id",x.id);if(u.error){showErr(u.error.message);return}toast("Produto ocultado");await admLoad();loadProducts();return}
+failBox("Não foi possível excluir",why+" Para resolver, rode este SQL no Supabase (SQL Editor):",fk?SQL_FK:sqlDel("products"));return}
+toast("Produto excluído");await admLoad();loadProducts()}
 /* ---------- foto do produto: HEIC, compressão e Google Drive ---------- */
 var ICON_PC='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
 ICON_DR='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 00-11.6-1.5A4.5 4.5 0 006.5 18H18a4 4 0 000-8z"/></svg>';
@@ -464,11 +498,11 @@ if(!gOK()){m.textContent="Google Drive ainda não configurado: preencha GOOGLE_C
 busy=true;m.className="msg ok";m.textContent="Abrindo o Google Drive…";
 try{var x=await pickDrive();busy=false;if(!x){m.className="msg";m.textContent="";return}await usePhoto(x,"Google Drive")}
 catch(e){busy=false;m.className="msg";m.textContent="Não foi possível conectar ao Google Drive. Verifique a janela de login do Google e tente de novo."}}
-var btnEd=h("button",{type:"button",cls:"btn sm ghost",text:"✎ Ajustar enquadramento",style:"margin-top:8px"+(img?"":";display:none"),onclick:async function(){if(busy)return;if(!src&&img){src=img;srcName="foto"}await editSrc("")}}),btnPc=h("button",{type:"button",cls:"btn sm ghost",onclick:function(){if(!busy)fi.click()}}),btnDr=h("button",{type:"button",cls:"btn sm ghost",onclick:driveClick});
+var btnEd=h("button",{type:"button",cls:"btn sm fill",text:"✎ Editar foto",style:(img?"":"display:none"),onclick:async function(){if(busy)return;if(!src&&img){src=img;srcName="foto"}await editSrc("")}}),btnPc=h("button",{type:"button",cls:"btn sm ghost",onclick:function(){if(!busy)fi.click()}}),btnDr=h("button",{type:"button",cls:"btn sm ghost",onclick:driveClick});
 btnPc.innerHTML=ICON_PC+"<span>Do computador</span>";btnDr.innerHTML=ICON_DR+"<span>Do Google Drive</span>";
 var n=h("input",{value:p.name||""}),c=h("input",{value:p.category||"",list:"cats"}),pr=h("input",{value:p.price!=null?String(p.price).replace(".",","):"",inputmode:"decimal"}),d=h("textarea",{rows:"3",value:p.description||""}),l=h("input",{value:p.link||"",inputmode:"url",placeholder:"https://…"}),a=h("input",{type:"checkbox",checked:p.active!==false,style:"width:auto;margin-right:8px"}),ft=h("input",{type:"checkbox",checked:!!p.featured,style:"width:auto;margin-right:8px"});
 var ov=h("div",{cls:"ov",onclick:function(e){if(e.target==ov)ov.remove()}},h("div",{cls:"sheet"},h("h3",{text:ed?"Editar produto":"Novo produto"}),
-L("Nome do produto",n),L("Categoria",c),L("Preço (ex: 199,90)",pr),L("Descrição",d),L("Link do pedido (opcional)",l),L("Foto do produto",h("div",{},h("div",{cls:"pick"},btnPc,btnDr),fi,fn)),pv,h("div",{},btnEd),
+L("Nome do produto",n),L("Categoria",c),L("Preço (ex: 199,90)",pr),L("Descrição",d),L("Link do pedido (opcional)",l),L("Foto do produto",h("div",{},h("div",{cls:"pick"},btnPc,btnDr,btnEd),fi,fn)),pv,
 h("label",{},a,"Visível na loja"),h("label",{},ft,"Destaque na vitrine (produtos em alta)"),m,
 h("div",{cls:"row"},h("button",{cls:"btn fill",text:"Salvar",onclick:async function(){
 var nm=n.value.trim(),ct=c.value.trim(),price=parseFloat((pr.value||"").replace(",",".")),lk=l.value.trim();m.className="msg";
@@ -487,7 +521,10 @@ document.body.appendChild(ov)}
 var ST={pendente:"Pendente",pago:"Venda confirmada",cancelado:"Cancelado"},SC={pendente:"pe",pago:"",cancelado:"ca"};
 function grp(){var g={},ks=[];AD.o.forEach(function(o){var k=o.code||o.id;if(!g[k]){g[k]={code:o.code,rows:[],t:o.created_at};ks.push(k)}g[k].rows.push(o)});return ks.map(function(k){var x=g[k];x.total=sum(x.rows);x.status=x.rows[0].status;x.ids=x.rows.map(function(o){return o.id});return x})}
 async function setSt(g,st){var r=await SB.from("orders").update({status:st}).in("id",g.ids);if(r.error){showErr(r.error.message);return}await admLoad()}
-async function delOrd(ids,msg){if(!ids.length)return;if(!(await askC(msg)))return;var r=await SB.from("orders").delete().in("id",ids).select("id");if(r.error){showErr(r.error.message);return}if(!r.data||!r.data.length){showErr(RLS_MSG.replace("TABELA","orders"));return}toast(r.data.length>1?"Pedidos excluídos":"Pedido excluído");await admLoad()}
+async function delOrd(ids,msg){if(!ids.length)return;if(!(await askC(msg)))return;
+var r=await SB.from("orders").delete({count:"exact"}).in("id",ids);
+if(r.error||!r.count){failBox("O banco não deixou apagar",(r.error?"Erro do banco: "+r.error.message:"O banco recusou a exclusão (falta permissão).")+" Você pode tirar da lista agora (fica escondido só neste aparelho) e, para apagar de verdade, rodar o SQL abaixo no Supabase.",r.error?null:sqlDel("orders"),{text:"Tirar da lista agora",fn:async function(){hideOrd(ids);toast("Removido da lista");await admLoad()}});return}
+toast(r.count>1?"Pedidos excluídos":"Pedido excluído");await admLoad()}
 async function autoClean(){var d=S.cfg&&S.cfg.auto_clean_days;d=d==null?7:+d;if(!d)return;var r=await SB.from("orders").delete().in("status",["pendente","cancelado"]).lt("created_at",new Date(Date.now()-d*864e5).toISOString()).select("id");if(!r.error&&r.data&&r.data.length)toast(r.data.length+" pedidos antigos descartados")}
 function viewPed(v){
 var G=grp(),days=(S.cfg&&S.cfg.auto_clean_days)?+S.cfg.auto_clean_days:7,cut=Date.now()-days*864e5,n={all:G.length,pendente:0,pago:0,cancelado:0};
@@ -520,11 +557,11 @@ $("ann").textContent=c.announce||"";$("ann").classList.toggle("hide",!c.announce
 
 var f=$("ft");f.innerHTML="";
 function col(t,it){it=it.filter(Boolean);if(!it.length)return;var d=h("div",{},h("h4",{text:t}));it.forEach(function(x){d.appendChild(x)});f.appendChild(d)}
-function ln(l,u){return lk(u)?h("a",{href:u,target:"_blank",rel:"noopener",text:l}):null}
+function ln(l,u){return lk(u)?h("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:l}):null}
 
 col("Contato",[c.email?h("a",{href:"mailto:"+c.email,text:c.email}):null,c.address?h("p",{text:c.address}):null,c.hours?h("p",{text:c.hours}):null]);
 var so=$("soc");so.innerHTML="";
-[["Instagram",c.instagram==null?DEF_IG:c.instagram,1],["TikTok",c.tiktok==null?DEF_TT:c.tiktok,1],["Facebook",c.facebook,0]].forEach(function(x){if(lk(x[1]))so.appendChild(h("a",{cls:"btn sm ghost",href:x[1],target:"_blank",rel:"noopener",text:x[0]+(x[2]?" @"+x[1].replace(/\/+$/,"").split("/").pop().replace(/^@/,""):"")}))});
+[["Instagram",c.instagram==null?DEF_IG:c.instagram,1],["TikTok",c.tiktok==null?DEF_TT:c.tiktok,1],["Facebook",c.facebook,0]].forEach(function(x){if(lk(x[1]))so.appendChild(h("a",{cls:"btn sm ghost",href:x[1],target:"_blank",rel:"noopener noreferrer",text:x[0]+(x[2]?" @"+x[1].replace(/\/+$/,"").split("/").pop().replace(/^@/,""):"")}))});
 col("Pagamento e entrega",[c.payments?h("p",{text:"Pagamento: "+c.payments}):null,c.shipping?h("p",{text:"Entrega: "+c.shipping}):null]);
 $("cp").textContent="© 2026 "+n+". "+(c.footer_text||"Todos os direitos reservados.")+" ";$("cp").appendChild(h("small",{style:"opacity:.5",text:"v10"}))}
 var SPEC=[["Identidade da loja",[["store_name","Nome da loja","t"],["hero_text","Slogan / texto da página inicial","t"],["announce","Aviso no topo do site (ex: Frete grátis hoje)","t"]]],
