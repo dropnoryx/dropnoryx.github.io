@@ -2,6 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta name="drop-versao" content="editor-recorte-2026-11-25">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://accounts.google.com https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://www.googleapis.com; frame-src https://accounts.google.com https://docs.google.com https://drive.google.com; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DROP.NORYX | Estilo que se destaca</title>
 <meta name="theme-color" content="#02060d">
@@ -110,7 +113,7 @@ td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:middle}t
 .pop button{display:block;width:100%;background:none;border:0;text-align:left;padding:10px;border-radius:8px;font-size:14px}.pop button:hover{background:#0c2233}.pop .r{color:var(--er)}
 .ov{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.65);display:flex;justify-content:flex-end}
 .sheet{width:min(460px,100%);height:100%;background:var(--surf);border-left:1px solid var(--line);overflow-y:auto;padding:20px;padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
-.pv{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#0c2233;margin-top:8px}
+.pv{width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;border-radius:12px;background:#0c2233;margin-top:8px}
 @media(max-width:900px){.g2{grid-template-columns:1fr}.g2 .pnl{margin-bottom:12px}}
 @media(max-width:760px){.app.open{flex-direction:column-reverse}.side{width:100%;flex-direction:row;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));border-right:0;border-top:1px solid var(--line)}
 .sb{display:none}.sn{flex-direction:row}.sf{flex-direction:row}.side button{flex-direction:column;gap:2px;font-size:10px;padding:6px 4px;flex:1;justify-content:center;align-items:center;text-align:center}}
@@ -151,6 +154,13 @@ html{scroll-padding-top:110px}
 .tot{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;margin:16px 0 14px}.tot strong{font-size:24px;color:var(--cy)}
 .oc{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}.oc .oh{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}.oc ul{margin:0 0 12px;padding-left:18px;font-size:14px}.oc .of{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.oc .oa{display:flex;gap:8px;flex-wrap:wrap}
 .bd.pe{background:#3a2f0c;color:#ffc857}.bd.ca{background:#3a0d14;color:var(--er)}.btn.danger{border-color:var(--er);color:var(--er);box-shadow:none}.btn.danger:hover{background:var(--er);color:#1a0206}
+
+/* ---- Entrar com Google + escolher foto do Drive ---- */
+.gbtn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:46px;background:#fff;color:#1f1f1f;border:1px solid #dadce0;border-radius:999px;padding:11px 16px;font-weight:700;font-size:15px;transition:.2s}
+.gbtn:hover{background:#eef3fb}.gbtn:disabled{opacity:.6;cursor:wait}.gbtn svg{width:20px;height:20px;flex:none}
+.or{display:flex;align-items:center;gap:12px;color:var(--mu);font-size:12px;margin:16px 0 2px;text-transform:uppercase;letter-spacing:.08em}.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.pick{display:flex;gap:8px;flex-wrap:wrap}.pick .btn{flex:1;min-width:150px;gap:8px;padding:10px 12px}.pick svg{flex:none}
+.fn{font-size:12px;color:var(--mu);margin-top:8px;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -174,20 +184,21 @@ html{scroll-padding-top:110px}
 <section id="contato" style="padding:0 0 44px"><div class="wrap"><div class="cta">
 <h2>Mais que uma loja, é estilo.</h2>
 <p>Tem dúvida ou quer um produto específico? Chame no WhatsApp e responderemos o quanto antes.</p>
-<a class="btn lg" id="wa" target="_blank" rel="noopener" href="#">Chamar no WhatsApp</a>
+<a class="btn lg" id="wa" target="_blank" rel="noopener noreferrer" href="#">Chamar no WhatsApp</a>
 </div></div></section>
 </main>
 <div class="ov hide" id="cartOv"><div class="sheet" id="cartBox"></div></div><div class="toast" id="toast"></div>
-<a class="wf" id="wf" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/><path fill="#25d366" d="M8.6 7.2c-.4.3-.8.9-.7 1.800.2 1.800 1.600 3.800 3.300 5 1.200.9 2.600 1.300 3.500 1.100.8-.2 1.300-.9 1.300-1.300 0-.2-.1-.3-.3-.4l-1.500-.7c-.2-.1-.4 0-.5.100l-.5.600c-.1.100-.3.200-.5.100-.9-.4-1.700-1-2.300-1.900-.1-.2-.1-.3 0-.5l.4-.5c.1-.1.1-.3.100-.4l-.7-1.600c-.1-.2-.4-.3-.6-.3z"/></svg></a>
+<a class="wf" id="wf" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2z"/><path fill="#25d366" d="M8.6 7.2c-.4.3-.8.9-.7 1.800.2 1.800 1.600 3.800 3.300 5 1.200.9 2.600 1.300 3.500 1.100.8-.2 1.300-.9 1.300-1.300 0-.2-.1-.3-.3-.4l-1.500-.7c-.2-.1-.4 0-.5.100l-.5.600c-.1.100-.3.200-.5.100-.9-.4-1.700-1-2.300-1.900-.1-.2-.1-.3 0-.5l.4-.5c.1-.1.1-.3.100-.4l-.7-1.600c-.1-.2-.4-.3-.6-.3z"/></svg></a>
 <footer><div class="wrap">
 <div class="ftag">Estilo que se destaca</div>
-<div class="hb" id="soc"><a class="btn sm ghost" href="https://www.instagram.com/drop.noryx" target="_blank" rel="noopener">Instagram @drop.noryx</a><a class="btn sm ghost" href="https://www.tiktok.com/@drop.noryx" target="_blank" rel="noopener">TikTok @drop.noryx</a></div>
+<div class="hb" id="soc"><a class="btn sm ghost" href="https://www.instagram.com/drop.noryx" target="_blank" rel="noopener noreferrer">Instagram @drop.noryx</a><a class="btn sm ghost" href="https://www.tiktok.com/@drop.noryx" target="_blank" rel="noopener noreferrer">TikTok @drop.noryx</a></div>
 <div class="ft" id="ft" style="margin-top:22px"></div>
 <div id="cp" style="padding-bottom:12px">© 2026 DROP.NORYX. Todos os direitos reservados.</div>
 </div></footer>
 
 <div class="modal" id="modal"><div class="box">
 <div class="tabs" id="tabs"><button class="tab on" data-t="in">Entrar</button><button class="tab" data-t="up">Cadastrar</button></div>
+<div id="gBox"><button type="button" class="gbtn" id="gBtn"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span id="gTxt">Entrar com o Google</span></button><div class="or"><span>ou</span></div></div>
 <div id="fName" class="hide"><label for="iN">Nome</label><input id="iN" autocomplete="name"></div>
 <div id="fE"><label for="iE">E-mail</label><input id="iE" type="email" autocomplete="email" inputmode="email"></div>
 <label for="iP" id="lP">Senha</label><div class="pwf"><input id="iP" type="password" autocomplete="current-password"><button type="button" class="eye" aria-label="Mostrar ou ocultar senha"></button></div>
@@ -209,14 +220,21 @@ html{scroll-padding-top:110px}
 </aside>
 <main id="admMain"><div class="tb"><h2 id="admT"></h2><span id="admU" class="sub" style="margin:0"></span></div><div id="admBody"></div></main>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 function showErr(m){var b=document.getElementById("errB");if(!b){b=document.createElement("div");b.id="errB";b.style.cssText="position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:99;background:#3a0d14;color:#ffd5da;border:1px solid #ff7b8a;border-radius:10px;padding:10px 12px;font:13px/1.4 monospace;word-break:break-word";b.onclick=function(){b.remove()};document.body.appendChild(b)}b.textContent="Erro: "+m+" (toque para fechar)"}
 window.onerror=function(m,u,l){showErr(m+" [linha "+l+"]")};
 window.addEventListener("unhandledrejection",function(e){showErr(String((e.reason&&e.reason.message)||e.reason))});
+/* ===== GOOGLE DRIVE (escolher foto do produto direto do Drive) =====
+   Preencha as 3 chaves abaixo (passo a passo nas instruções). Enquanto estiverem vazias,
+   o botão "Do Google Drive" avisa que falta configurar. O login com Google NÃO usa estas chaves:
+   ele é ativado no painel do Supabase (Authentication > Providers > Google). */
+var GOOGLE_CLIENT_ID="";   /* ID do cliente OAuth (Web), termina em .apps.googleusercontent.com */
+var GOOGLE_API_KEY="";     /* Chave de API do Google Cloud (com a Picker API ativada) */
+var GOOGLE_APP_ID="";      /* Número do projeto do Google Cloud (só números) */
 var SB=window.supabase&&supabase.createClient("https://etsrvvnalrixhstsxrjr.supabase.co","sb_publishable_bOzX132t_Tepje6yV4J48A_mWGjWtwh");
 var $=function(i){return document.getElementById(i)};
-var S={user:null,admin:false,name:"",wa:"595981256886",prods:[],cfg:{}},cat="Todos",qs="",srt="rel",tab="in",AT="res",AD={o:[],p:[],days:30},editId=null,editImg=null;
+var S={user:null,admin:false,name:"",wa:"595981256886",prods:[],cfg:{}},cat="Todos",qs="",srt="rel",tab="in",AT="res",AD={o:[],p:[],days:30},editId=null,editImg=null,OF="all";
 function h(t,p){var e=document.createElement(t);p=p||{};for(var k in p){var v=p[k];if(k=="text")e.textContent=v;else if(k=="cls")e.className=v;else if(k=="value"||k=="checked")e[k]=v;else if(k.slice(0,2)=="on")e[k]=v;else e.setAttribute(k,v)}for(var i=2;i<arguments.length;i++){var c=arguments[i];if(c!=null)e.appendChild(typeof c=="string"?document.createTextNode(c):c)}return e}
 function R(n){return ((S.cfg&&S.cfg.currency)||"R$")+" "+Number(n||0).toFixed(2).replace(".",",")}
 function tr(m){m=m||"";if(/invalid login/i.test(m))return "E-mail ou senha incorretos.";if(/already registered/i.test(m))return "Esse e-mail já tem conta. Use Entrar.";if(/rate limit|too many/i.test(m))return "Muitas tentativas. Aguarde um pouco.";if(/weak|least/i.test(m))return "Senha muito fraca. Use 8 caracteres ou mais.";return "Não foi possível agora. Tente novamente."}
@@ -224,7 +242,7 @@ function waLink(t){return "https://wa.me/"+S.wa+"?text="+encodeURIComponent(t)}
 function cats(){var c=S.cfg&&S.cfg.categories;c=Array.isArray(c)?c.filter(Boolean):[];return c.length?c:["Eletrônicos","Roupas","Tênis","Acessórios","Perfumes","Casa","Diversos"]}
 function allCats(){var a=cats().slice();S.prods.forEach(function(p){if(a.indexOf(p.category)<0)a.push(p.category)});return a}
 function nz(t){return(t||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
-function card(p){return h("div",{cls:"card"},p.image_url?h("img",{src:p.image_url,alt:p.name,loading:"lazy"}):h("div",{cls:"ph",text:p.category.charAt(0).toUpperCase()}),h("small",{text:p.category}),h("h3",{text:p.name}),p.description?h("span",{text:p.description}):null,h("strong",{text:R(p.price)}),h("button",{cls:"btn sm fill",text:"Adicionar ao carrinho",onclick:function(){addCart(p)}}),h("button",{cls:"btn sm ghost",text:"Comprar no WhatsApp",onclick:function(){checkout([{p:p,q:1}],{link:p.link})}}))}
+function card(p){return h("div",{cls:"card"},lk(p.image_url)?h("img",{src:p.image_url,alt:p.name,loading:"lazy"}):h("div",{cls:"ph",text:p.category.charAt(0).toUpperCase()}),h("small",{text:p.category}),h("h3",{text:p.name}),p.description?h("span",{text:p.description}):null,h("strong",{text:R(p.price)}),h("button",{cls:"btn sm fill",text:"Adicionar ao carrinho",onclick:function(){addCart(p)}}),h("button",{cls:"btn sm ghost",text:"Comprar no WhatsApp",onclick:function(){checkout([{p:p,q:1}],{link:p.link})}}))}
 function render(){
 $("wa").href=waLink("Olá! Vim pelo site da "+((S.cfg&&S.cfg.store_name)||"DROP.NORYX")+" e quero fazer um pedido.");$("wf").href=$("wa").href;
 var nv=$("cnav");nv.innerHTML="";
@@ -253,7 +271,7 @@ var b=$("cartBox"),it=cartItems(),tot=0;b.innerHTML="";
 b.appendChild(h("div",{style:"display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"},h("h3",{text:"Seu carrinho",style:"margin:0"}),h("button",{cls:"btn sm ghost",text:"✕",onclick:closeCart})));
 if(!it.length){b.appendChild(h("p",{cls:"sub",text:"Seu carrinho está vazio."}));b.appendChild(h("button",{cls:"btn fill",text:"Continuar comprando",onclick:closeCart}));return}
 it.forEach(function(i){tot+=i.p.price*i.q;
-b.appendChild(h("div",{cls:"ci"},i.p.image_url?h("img",{src:i.p.image_url,alt:""}):h("div",{cls:"ph",text:i.p.category.charAt(0).toUpperCase()}),
+b.appendChild(h("div",{cls:"ci"},lk(i.p.image_url)?h("img",{src:i.p.image_url,alt:""}):h("div",{cls:"ph",text:i.p.category.charAt(0).toUpperCase()}),
 h("div",{},h("b",{text:i.p.name}),h("div",{cls:"sub",style:"margin:2px 0 8px;font-size:13px",text:R(i.p.price)+" cada"}),
 h("div",{style:"display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap"},h("div",{cls:"qs"},h("button",{text:"−",onclick:function(){qty(i.p.id,-1)}}),h("b",{text:String(i.q)}),h("button",{text:"+",onclick:function(){qty(i.p.id,1)}})),h("strong",{text:R(i.p.price*i.q)})),
 h("button",{cls:"lnk",text:"Remover",onclick:function(){qty(i.p.id,-99)}}))))});
@@ -270,13 +288,13 @@ var tot=0,ls=items.map(function(i){tot+=i.p.price*i.q;return "• "+i.q+"x "+i.p
 var c=S.cfg||{},intro=(c.wa_message&&c.wa_message.indexOf("{produto}")<0?c.wa_message:"Olá! Vim pela {loja} e quero fazer um pedido:").replace(/\{loja\}/g,c.store_name||"DROP.NORYX");
 var u=lk(o.link)?o.link:waLink(intro+" (Pedido #"+code+")\n\n"+ls.join("\n")+"\n\nTotal: "+R(tot));
 if(o.cart){CART=[];saveCart();cartUI();closeCart()}
-if(w)w.location=u;else location.href=u}
+if(w){try{w.opener=null}catch(e){}w.location=u}else location.href=u}
 function head(){$("who").textContent=S.user?"Olá, "+(S.name||S.user.email.split("@")[0]).split(" ")[0]:"";$("bIn").classList.toggle("hide",!!S.user);$("bUp").classList.toggle("hide",!!S.user);$("bOut").classList.toggle("hide",!S.user);$("bAdm").classList.toggle("hide",!S.admin)}
 async function setUser(u){S.user=u||null;S.admin=false;S.name="";
 if(u){var r=await SB.from("profiles").select("name,is_admin").eq("id",u.id).maybeSingle();if(r.data){S.admin=!!r.data.is_admin;S.name=r.data.name||""}}head()}
 function openM(){$("modal").classList.add("open")}function closeM(){$("modal").classList.remove("open")}
 function setTab(t){tab=t;document.querySelectorAll("[data-t]").forEach(function(b){b.classList.toggle("on",b.dataset.t==t)});
-$("tabs").classList.toggle("hide",t=="rec");$("fName").classList.toggle("hide",t!="up");$("fE").classList.toggle("hide",t=="rec");$("fP2").classList.toggle("hide",t=="in");$("forgot").classList.toggle("hide",t!="in");
+$("tabs").classList.toggle("hide",t=="rec");$("gBox").classList.toggle("hide",t=="rec");$("gTxt").textContent=t=="up"?"Cadastrar com o Google":"Entrar com o Google";$("fName").classList.toggle("hide",t!="up");$("fE").classList.toggle("hide",t=="rec");$("fP2").classList.toggle("hide",t=="in");$("forgot").classList.toggle("hide",t!="in");
 $("lP").textContent=t=="rec"?"Nova senha":"Senha";$("iP").autocomplete=t=="in"?"current-password":"new-password";
 $("aGo").textContent=t=="up"?"Cadastrar":t=="rec"?"Salvar nova senha":"Entrar";$("aM").textContent="";$("aM").className="msg"}
 $("aGo").onclick=async function(){
@@ -295,6 +313,12 @@ b.disabled=false;
 if(r.error){m.textContent=tr(r.error.message);return}
 if(tab!="rec"&&r.data.session){await setUser(r.data.session.user);closeM()}
 $("iP").value="";$("iP2").value=""};
+$("gBtn").onclick=async function(){var m=$("aM"),b=this;m.className="msg";m.textContent="";
+if(!SB){m.textContent="Sem conexão com o servidor.";return}
+b.disabled=true;
+try{var r=await SB.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+location.pathname,queryParams:{prompt:"select_account"}}});
+if(r.error){m.textContent="Não foi possível entrar com o Google agora. Tente de novo.";b.disabled=false}}
+catch(x){m.textContent="Não foi possível entrar com o Google agora. Tente de novo.";b.disabled=false}};
 $("forgot").onclick=async function(){var e=$("iE").value.trim().toLowerCase(),m=$("aM");
 if(!/^\S+@\S+\.\S+$/.test(e)){m.className="msg";m.textContent="Digite seu e-mail acima primeiro.";return}
 try{await SB.auth.resetPasswordForEmail(e,{redirectTo:location.origin+location.pathname})}catch(x){}
@@ -310,8 +334,31 @@ var CL=["#4fe3ff","#3ddc97","#ffc857","#b48cff","#ff7b8a"],PQ="",PF="all",OF="al
 function closeAdm(){$("adm").classList.remove("open");document.body.style.overflow="";cpop()}
 $("admX").onclick=closeAdm;
 $("admOut").onclick=function(){closeAdm();$("bOut").onclick()};
-$("bAdm").onclick=async function(){try{if(!S.admin){showErr("sua conta não é admin");return}AT="res";$("adm").classList.add("open");document.body.style.overflow="hidden";await admLoad()}catch(e){showErr(e.message)}};
-async function admLoad(){try{await autoClean()}catch(e){}var a=await SB.from("orders").select("*").order("created_at",{ascending:false}).limit(1000),b=await SB.from("products").select("*").order("created_at",{ascending:false});if(a.error||b.error)showErr((a.error||b.error).message);AD.o=a.data||[];AD.p=b.data||[];admView()}
+/* ---- SEGURANCA: MFA (TOTP) obrigatorio para o painel ADM + expiracao por inatividade ---- */
+function mfaAsk(qr,secret){return new Promise(function(done){var inp=h("input",{inputmode:"numeric",autocomplete:"one-time-code",maxlength:"6",placeholder:"000000"}),m=h("div",{cls:"msg"}),ov=h("div",{cls:"modal open",style:"z-index:90"});
+function fin(v){ov.remove();done(v)}
+ov.appendChild(h("div",{cls:"box"},h("h3",{text:"Verificação em duas etapas",style:"margin:0 0 8px"}),
+h("p",{cls:"sub",style:"font-size:14px;margin:0 0 10px",text:qr?"Escaneie o QR no app autenticador (Google Authenticator, Authy…) e digite o código de 6 dígitos.":"Digite o código de 6 dígitos do seu app autenticador."}),
+qr?h("img",{src:qr,alt:"QR code",style:"width:180px;height:180px;background:#fff;border-radius:10px;display:block;margin:0 auto 8px"}):null,
+secret?h("p",{cls:"sub",style:"font-size:12px;word-break:break-all;margin:0 0 8px",text:"Chave manual: "+secret}):null,
+inp,m,h("div",{cls:"row"},h("button",{cls:"btn fill",text:"Confirmar",onclick:function(){var c=inp.value.replace(/\D/g,"");if(c.length!=6){m.textContent="Digite os 6 dígitos.";return}fin(c)}}),h("button",{cls:"btn ghost",text:"Cancelar",onclick:function(){fin(null)}}))));
+document.body.appendChild(ov);inp.focus()})}
+async function mfaGate(){var a=await SB.auth.mfa.getAuthenticatorAssuranceLevel();if(a.error){showErr(a.error.message);return false}
+if(a.data.currentLevel=="aal2")return true;
+var fl=await SB.auth.mfa.listFactors(),all=(fl.data&&fl.data.totp)||[],ok=all.filter(function(x){return x.status=="verified"})[0],fid,qr=null,sec=null;
+if(ok)fid=ok.id;else{for(var i=0;i<all.length;i++)await SB.auth.mfa.unenroll({factorId:all[i].id});
+var en=await SB.auth.mfa.enroll({factorType:"totp",friendlyName:"Drop.Noryx admin "+Date.now()});if(en.error){showErr(en.error.message);return false}
+fid=en.data.id;qr=en.data.totp.qr_code;sec=en.data.totp.secret}
+var code=await mfaAsk(qr,sec);if(!code)return false;
+var ch=await SB.auth.mfa.challenge({factorId:fid});if(ch.error){showErr(ch.error.message);return false}
+var vr=await SB.auth.mfa.verify({factorId:fid,challengeId:ch.data.id,code:code});if(vr.error){showErr("Código incorreto.");return false}
+return true}
+var IDLE=null;function admIdle(){clearTimeout(IDLE);IDLE=setTimeout(async function(){if(!$("adm").classList.contains("open"))return;closeAdm();toast("Sessão do painel expirada");try{await SB.auth.signOut();await setUser(null)}catch(e){}},30*60*1000)}
+["pointerdown","keydown","scroll"].forEach(function(ev){$("adm").addEventListener(ev,function(){if($("adm").classList.contains("open"))admIdle()},{passive:true})});
+$("bAdm").onclick=async function(){try{if(!S.admin){showErr("sua conta não é admin");return}if(!(await mfaGate()))return;AT="res";$("adm").classList.add("open");document.body.style.overflow="hidden";admIdle();await admLoad()}catch(e){showErr(e.message)}};
+var HID=[];try{HID=JSON.parse(localStorage.getItem("hidOrd")||"[]")}catch(e){}
+function hideOrd(ids){ids.forEach(function(i){if(HID.indexOf(i)<0)HID.push(i)});try{localStorage.setItem("hidOrd",JSON.stringify(HID))}catch(e){}}
+async function admLoad(){try{await autoClean()}catch(e){}var a=await SB.from("orders").select("*").order("created_at",{ascending:false}).limit(1000),b=await SB.from("products").select("*").order("created_at",{ascending:false});if(a.error||b.error)showErr((a.error||b.error).message);AD.o=(a.data||[]).filter(function(o){return HID.indexOf(o.id)<0});AD.p=b.data||[];admView()}
 function admView(){var v=$("admBody");v.innerHTML="";document.querySelectorAll("[data-at]").forEach(function(b){b.classList.toggle("on",b.dataset.at==AT)});
 $("admT").textContent={res:"Visão geral",prd:"Produtos",ped:"Pedidos",cfg:"Configurações"}[AT];$("admU").textContent=S.name?"Olá, "+S.name.split(" ")[0]:"";
 ({res:viewRes,prd:viewPrd,ped:viewPed,cfg:viewCfg})[AT](v);$("admMain").scrollTop=0}
@@ -358,20 +405,127 @@ tb.appendChild(h("tr",{},h("td",{},h("div",{cls:"nm"},x.image_url?h("img",{src:x
 t.appendChild(tb);w.appendChild(t)}
 tbl()}
 async function togg(x){var r=await SB.from("products").update({active:!x.active}).eq("id",x.id);if(r.error){showErr(r.error.message);return}await admLoad();loadProducts()}
-async function delPrd(x){if(!confirm("Excluir "+x.name+"?"))return;var r=await SB.from("products").delete().eq("id",x.id);if(r.error){showErr(r.error.message);return}await admLoad();loadProducts()}
+function askC(msg,okT,noT){return new Promise(function(ok){var ov=h("div",{style:"position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:16px"},h("div",{cls:"box",style:"max-width:380px"},h("p",{text:msg,style:"margin:0 0 16px;font-size:16px;line-height:1.4"}),h("div",{cls:"row",style:"margin-top:0"},h("button",{type:"button",cls:"btn sm danger",text:okT||"Excluir",onclick:function(){ov.remove();ok(true)}}),h("button",{type:"button",cls:"btn sm ghost",text:noT||"Cancelar",onclick:function(){ov.remove();ok(false)}}))));document.body.appendChild(ov)})}
+function failBox(title,msg,sql,ex){var ta=sql?h("textarea",{rows:"7",readonly:"readonly",style:"font:12px/1.4 monospace;margin-top:10px",value:sql}):null;
+var ov=h("div",{style:"position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;padding:16px"},h("div",{cls:"box",style:"max-width:520px"},h("h3",{text:title,style:"margin:0 0 8px;color:var(--er)"}),h("p",{text:msg,style:"margin:0;font-size:14px;line-height:1.5"}),ta,
+h("div",{cls:"row"},sql?h("button",{type:"button",cls:"btn sm fill",text:"Copiar SQL",onclick:function(){ta.select();try{navigator.clipboard.writeText(sql)}catch(e){try{document.execCommand("copy")}catch(e2){}}toast("SQL copiado")}}):null,ex?h("button",{type:"button",cls:"btn sm fill",text:ex.text,onclick:function(){ov.remove();ex.fn()}}):null,h("button",{type:"button",cls:"btn sm ghost",text:"Fechar",onclick:function(){ov.remove()}}))));document.body.appendChild(ov)}
+function sqlDel(t){return 'drop policy if exists "admin apaga '+t+'" on public.'+t+';\ncreate policy "admin apaga '+t+'" on public.'+t+' for delete to authenticated\nusing (exists (select 1 from public.profiles p where p.id = auth.uid() and p.is_admin));'}
+var SQL_FK='alter table public.orders alter column product_id drop not null;\nalter table public.orders drop constraint if exists orders_product_id_fkey;\nalter table public.orders add constraint orders_product_id_fkey foreign key (product_id) references public.products(id) on delete set null;';
+async function delPrd(x){if(!(await askC("Excluir "+x.name+"?")))return;
+var r=await SB.from("products").delete({count:"exact"}).eq("id",x.id);
+if(r.error||!r.count){var fk=r.error&&(r.error.code=="23503"||/foreign key/i.test(r.error.message||"")),why=fk?"Este produto já está ligado a pedidos, e o banco não deixa apagar.":(r.error?"Erro do banco: "+r.error.message:"O banco não permitiu apagar (falta a permissão de exclusão).");
+if(await askC(why+" Quer ocultar da loja em vez de excluir?","Ocultar da loja","Não")){var u=await SB.from("products").update({active:false}).eq("id",x.id);if(u.error){showErr(u.error.message);return}toast("Produto ocultado");await admLoad();loadProducts();return}
+failBox("Não foi possível excluir",why+" Para resolver, rode este SQL no Supabase (SQL Editor):",fk?SQL_FK:sqlDel("products"));return}
+toast("Produto excluído");await admLoad();loadProducts()}
+/* ---------- foto do produto: HEIC, compressão e Google Drive ---------- */
+var ICON_PC='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
+ICON_DR='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a6 6 0 00-11.6-1.5A4.5 4.5 0 006.5 18H18a4 4 0 000-8z"/></svg>';
+function loadScript(src){return new Promise(function(ok,no){var e=document.createElement("script");e.src=src;e.async=true;e.onload=ok;e.onerror=function(){no(new Error("script"))};document.head.appendChild(e)})}
+var MAXPHOTO=100e6;
+async function prepPhoto(file){
+var t=(file.type||"").toLowerCase(),n=(file.name||"foto").toLowerCase(),heic=/hei[cf]/.test(t)||/\.hei[cf]$/.test(n);
+if(file.size>MAXPHOTO)throw new Error("big");
+if(!heic)return file;
+if(!window.heic2any)await loadScript("https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js");
+var o=await heic2any({blob:file,toType:"image/jpeg",quality:.95}),blob=Array.isArray(o)?o[0]:o;
+return new File([blob],(file.name||"foto").replace(/\.[^.]+$/,"")+".jpg",{type:"image/jpeg"})}
+/* ---------- editor de enquadramento da foto ---------- */
+function loadImg(src,cors){return new Promise(function(ok,no){var i=new Image();if(cors)i.crossOrigin="anonymous";i.onload=function(){ok(i)};i.onerror=function(){no(new Error("img"))};i.src=src})}
+function photoEditor(img0,name){return new Promise(function(done){
+var img=img0,W=img.naturalWidth||img.width,H=img.naturalHeight||img.height,k=1,DW=0,DH=0,ratio=1,cr={x:0,y:0,w:W,h:H},drag=null,
+MAXW=Math.min(Math.round(innerWidth*.86),400),MAXH=Math.round(innerHeight*.42),dpr=Math.min(devicePixelRatio||1,2);
+var cv=h("canvas",{style:"display:block;margin:0 auto;border-radius:10px;touch-action:none;background:#0c2233"}),cx=cv.getContext("2d"),info=h("div",{style:"text-align:center;font-size:13px;color:var(--mu);margin-top:8px"}),chips=[];
+function layout(){k=Math.min(MAXW/W,MAXH/H);DW=Math.round(W*k);DH=Math.round(H*k);cv.style.width=DW+"px";cv.style.height=DH+"px";cv.width=DW*dpr;cv.height=DH*dpr}
+function fit(r){var w=W,hh=W/r;if(hh>H){hh=H;w=H*r}cr={x:(W-w)/2,y:(H-hh)/2,w:w,h:hh}}
+function mark(){chips.forEach(function(c){c.b.classList.toggle("on",c.r===ratio||(c.o&&ratio&&Math.abs(ratio-W/H)<1e-6&&c.r===-1))})}
+function setRatio(r){ratio=r;if(r)fit(r);paint();mark()}
+function paint(){cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,DW,DH);cx.drawImage(img,0,0,DW,DH);
+var X=cr.x*k,Y=cr.y*k,w=cr.w*k,hh=cr.h*k;cx.fillStyle="rgba(0,0,0,.6)";cx.fillRect(0,0,DW,Y);cx.fillRect(0,Y+hh,DW,DH-Y-hh);cx.fillRect(0,Y,X,hh);cx.fillRect(X+w,Y,DW-X-w,hh);
+cx.strokeStyle="rgba(255,255,255,.35)";cx.lineWidth=1;cx.beginPath();for(var i=1;i<3;i++){cx.moveTo(X+w*i/3,Y);cx.lineTo(X+w*i/3,Y+hh);cx.moveTo(X,Y+hh*i/3);cx.lineTo(X+w,Y+hh*i/3)}cx.stroke();
+cx.strokeStyle="#fff";cx.lineWidth=2;cx.strokeRect(X,Y,w,hh);cx.fillStyle="#fff";
+hs().forEach(function(p){cx.fillRect(p[1]-6,p[2]-6,12,12)});
+info.textContent=Math.round(cr.w)+" × "+Math.round(cr.h)+" px"}
+function hs(){var X=cr.x*k,Y=cr.y*k,w=cr.w*k,hh=cr.h*k,a=[["nw",X,Y],["ne",X+w,Y],["sw",X,Y+hh],["se",X+w,Y+hh]];if(!ratio)a.push(["n",X+w/2,Y],["s",X+w/2,Y+hh],["w",X,Y+hh/2],["e",X+w,Y+hh/2]);return a}
+function pos(e){var r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+function cl(v,a,b){return Math.max(a,Math.min(b,v))}
+cv.onpointerdown=function(e){var p=pos(e),m=null,hl=hs(),best=26;
+hl.forEach(function(q){var d=Math.hypot(p.x-q[1],p.y-q[2]);if(d<best){best=d;m=q[0]}});
+if(!m&&p.x>=cr.x*k&&p.x<=(cr.x+cr.w)*k&&p.y>=cr.y*k&&p.y<=(cr.y+cr.h)*k)m="move";
+if(!m)return;cv.setPointerCapture(e.pointerId);drag={m:m,sx:p.x,sy:p.y,c:{x:cr.x,y:cr.y,w:cr.w,h:cr.h},id:e.pointerId}};
+cv.onpointermove=function(e){if(!drag||e.pointerId!=drag.id)return;var p=pos(e),c=drag.c,m=drag.m,MIN=30/k;
+if(m=="move"){cr.x=cl(c.x+(p.x-drag.sx)/k,0,W-c.w);cr.y=cl(c.y+(p.y-drag.sy)/k,0,H-c.h);paint();return}
+var px=cl(p.x/k,0,W),py=cl(p.y/k,0,H),L=c.x,T=c.y,R=c.x+c.w,B=c.y+c.h;
+if(ratio){var ax=m.indexOf("w")>=0?R:L,ay=m.indexOf("n")>=0?B:T,w=Math.max(Math.abs(px-ax),Math.abs(py-ay)*ratio),aw=m.indexOf("w")>=0?ax:W-ax,ah=m.indexOf("n")>=0?ay:H-ay;
+w=Math.max(MIN,Math.min(w,aw,ah*ratio));var hh=w/ratio;cr={x:m.indexOf("w")>=0?ax-w:ax,y:m.indexOf("n")>=0?ay-hh:ay,w:w,h:hh}}
+else{if(m.indexOf("w")>=0)L=Math.min(px,R-MIN);if(m.indexOf("e")>=0)R=Math.max(px,L+MIN);if(m.indexOf("n")>=0)T=Math.min(py,B-MIN);if(m.indexOf("s")>=0)B=Math.max(py,T+MIN);cr={x:L,y:T,w:R-L,h:B-T}}
+paint()};
+cv.onpointerup=cv.onpointercancel=function(){drag=null};
+function rot(d){var c=document.createElement("canvas");c.width=H;c.height=W;var g=c.getContext("2d");if(d>0){g.translate(H,0);g.rotate(Math.PI/2)}else{g.translate(0,W);g.rotate(-Math.PI/2)}g.drawImage(img,0,0);img=c;var t=W;W=H;H=t;layout();if(ratio)fit(ratio);else cr={x:0,y:0,w:W,h:H};paint();mark()}
+var PRE=[["Livre",null],["1:1",1],["4:3",4/3],["3:4",3/4],["3:2",3/2],["16:9",16/9],["Original",-1]];
+var cw=h("div",{style:"display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px;justify-content:center"});
+PRE.forEach(function(o){var b=h("button",{type:"button",cls:"chip",text:o[0],onclick:function(){if(o[1]===-1){ratio=W/H;fit(ratio);paint();mark()}else setRatio(o[1])}});chips.push({b:b,r:o[1],o:o[1]===-1});cw.appendChild(b)});
+var ov=h("div",{style:"position:fixed;inset:0;z-index:210;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;padding:12px;overflow-y:auto"},
+h("div",{cls:"box",style:"max-width:440px"},h("h3",{text:"Editar foto",style:"margin:0 0 4px"}),
+h("p",{cls:"sub",style:"margin:0 0 12px;font-size:13px",text:"Escolha o formato, arraste a caixa para mover e puxe os cantos para aumentar ou diminuir. Na loja a foto aparece em quadrado (1:1)."}),
+cv,info,cw,
+h("div",{cls:"row",style:"margin-top:6px"},h("button",{type:"button",cls:"btn sm ghost",text:"↺ Girar",onclick:function(){rot(-1)}}),h("button",{type:"button",cls:"btn sm ghost",text:"Girar ↻",onclick:function(){rot(1)}}),h("button",{type:"button",cls:"btn sm ghost",text:"Redefinir",onclick:function(){setRatio(ratio);if(!ratio){cr={x:0,y:0,w:W,h:H};paint()}}})),
+h("div",{cls:"row",style:"margin-top:18px"},
+h("button",{type:"button",cls:"btn fill",text:"Aplicar",onclick:async function(){var s=Math.min(1,3000/Math.max(cr.w,cr.h)),oc=document.createElement("canvas");oc.width=Math.max(1,Math.round(cr.w*s));oc.height=Math.max(1,Math.round(cr.h*s));var g=oc.getContext("2d");g.fillStyle="#fff";g.fillRect(0,0,oc.width,oc.height);g.imageSmoothingQuality="high";g.drawImage(img,cr.x,cr.y,cr.w,cr.h,0,0,oc.width,oc.height);var q=.93,blob=null;for(var i=0;i<6;i++){blob=await new Promise(function(r){oc.toBlob(r,"image/jpeg",q)});if(blob&&blob.size<=45e6)break;q-=.1}ov.remove();done(blob?new File([blob],(name||"foto").replace(/\.[^.]+$/,"")+".jpg",{type:"image/jpeg"}):null)}}),
+h("button",{type:"button",cls:"btn ghost",text:"Cancelar",onclick:function(){ov.remove();done(null)}}))));
+document.body.appendChild(ov);layout();fit(1);paint();mark()})}
+var GD={ready:null,tc:null,tok:null,exp:0,ok:null,no:null};
+function gOK(){return !!(GOOGLE_CLIENT_ID&&GOOGLE_API_KEY&&GOOGLE_APP_ID)}
+function gReady(){if(GD.ready)return GD.ready;
+GD.ready=Promise.all([loadScript("https://accounts.google.com/gsi/client"),loadScript("https://apis.google.com/js/api.js")]).then(function(){return new Promise(function(ok){gapi.load("picker",ok)})}).catch(function(e){GD.ready=null;throw e});return GD.ready}
+function gToken(){return new Promise(function(ok,no){
+if(GD.tok&&Date.now()<GD.exp-60000){ok(GD.tok);return}
+GD.ok=ok;GD.no=no;
+if(!GD.tc)GD.tc=google.accounts.oauth2.initTokenClient({client_id:GOOGLE_CLIENT_ID,scope:"https://www.googleapis.com/auth/drive.file",
+callback:function(r){if(r&&r.access_token){GD.tok=r.access_token;GD.exp=Date.now()+(+r.expires_in||3600)*1000;GD.ok(GD.tok)}else GD.no(new Error((r&&r.error)||"token"))},
+error_callback:function(e){GD.no(new Error((e&&e.type)||"popup"))}});
+GD.tc.requestAccessToken({prompt:GD.tok?"":"select_account"})})}
+async function pickDrive(){
+await gReady();var tok=await gToken();
+var doc=await new Promise(function(ok){
+var mt="image/jpeg,image/png,image/webp,image/heic,image/heif",
+v1=new google.picker.DocsView().setIncludeFolders(true).setMimeTypes(mt).setMode(google.picker.DocsViewMode.GRID),
+v2=new google.picker.DocsView().setIncludeFolders(true).setOwnedByMe(false).setMimeTypes(mt).setMode(google.picker.DocsViewMode.GRID);
+new google.picker.PickerBuilder().setOAuthToken(tok).setDeveloperKey(GOOGLE_API_KEY).setAppId(GOOGLE_APP_ID).setLocale("pt-BR").setTitle("Escolha a foto do produto")
+.addView(v1).addView(v2).setCallback(function(d){var a=d[google.picker.Response.ACTION];
+if(a==google.picker.Action.PICKED)ok(d[google.picker.Response.DOCUMENTS][0]);else if(a==google.picker.Action.CANCEL)ok(null)}).build().setVisible(true)});
+if(!doc)return null;
+var r=await fetch("https://www.googleapis.com/drive/v3/files/"+encodeURIComponent(doc.id)+"?alt=media",{headers:{Authorization:"Bearer "+tok}});
+if(!r.ok)throw new Error("download");
+var b=await r.blob();return new File([b],doc.name||"foto-drive.jpg",{type:doc.mimeType||b.type})}
 function pform(p){var ed=!!p;p=p||{};var f=null,img=p.image_url||null,pv=h("img",{cls:"pv",alt:""});if(img)pv.src=img;else pv.style.display="none";
-var m=h("div",{cls:"msg"}),fi=h("input",{type:"file",accept:"image/jpeg,image/png,image/webp",onchange:function(){f=fi.files[0];if(f){pv.src=URL.createObjectURL(f);pv.style.display="block"}}});
+var m=h("div",{cls:"msg"}),busy=false,fn=h("div",{cls:"fn"}),fi=h("input",{type:"file",accept:"image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif",style:"display:none",onchange:function(){var x=fi.files[0];fi.value="";if(x)usePhoto(x,"")}});
+if(gOK())gReady().catch(function(){});
+var src=null,srcName="";
+function setOut(x,from){f=x;pv.src=URL.createObjectURL(x);pv.style.display="block";fn.textContent=(from?from+": ":"")+x.name+" · "+(x.size/1e6).toFixed(1).replace(".",",")+" MB";btnEd.style.display=""}
+async function editSrc(from){if(!src)return;var el=null;try{el=await loadImg(src,src.indexOf("blob:")!==0)}catch(e){m.className="msg";m.textContent="Não foi possível abrir essa imagem para edição.";return}
+var o=await photoEditor(el,srcName);if(o)setOut(o,from||"")}
+async function usePhoto(file,from){busy=true;m.className="msg ok";m.textContent=from?"Baixando do "+from+"…":"Preparando a foto…";
+try{var x=await prepPhoto(file);if(src&&src.indexOf("blob:")==0)URL.revokeObjectURL(src);src=URL.createObjectURL(x);srcName=x.name;setOut(x,from);m.className="msg";m.textContent="";busy=false;await editSrc(from)}
+catch(e){m.className="msg";m.textContent=e&&e.message=="big"?"Foto muito grande (máx. 100 MB).":"Não foi possível usar essa foto. Tente outra."}busy=false}
+async function driveClick(){if(busy)return;m.className="msg";m.textContent="";
+if(!gOK()){m.textContent="Google Drive ainda não configurado: preencha GOOGLE_CLIENT_ID, GOOGLE_API_KEY e GOOGLE_APP_ID no início do código.";return}
+busy=true;m.className="msg ok";m.textContent="Abrindo o Google Drive…";
+try{var x=await pickDrive();busy=false;if(!x){m.className="msg";m.textContent="";return}await usePhoto(x,"Google Drive")}
+catch(e){busy=false;m.className="msg";m.textContent="Não foi possível conectar ao Google Drive. Verifique a janela de login do Google e tente de novo."}}
+var btnEd=h("button",{type:"button",cls:"btn sm fill",text:"✎ Editar foto",style:(img?"":"display:none"),onclick:async function(){if(busy)return;if(!src&&img){src=img;srcName="foto"}await editSrc("")}}),btnPc=h("button",{type:"button",cls:"btn sm ghost",onclick:function(){if(!busy)fi.click()}}),btnDr=h("button",{type:"button",cls:"btn sm ghost",onclick:driveClick});
+btnPc.innerHTML=ICON_PC+"<span>Do computador</span>";btnDr.innerHTML=ICON_DR+"<span>Do Google Drive</span>";
 var n=h("input",{value:p.name||""}),c=h("input",{value:p.category||"",list:"cats"}),pr=h("input",{value:p.price!=null?String(p.price).replace(".",","):"",inputmode:"decimal"}),d=h("textarea",{rows:"3",value:p.description||""}),l=h("input",{value:p.link||"",inputmode:"url",placeholder:"https://…"}),a=h("input",{type:"checkbox",checked:p.active!==false,style:"width:auto;margin-right:8px"}),ft=h("input",{type:"checkbox",checked:!!p.featured,style:"width:auto;margin-right:8px"});
 var ov=h("div",{cls:"ov",onclick:function(e){if(e.target==ov)ov.remove()}},h("div",{cls:"sheet"},h("h3",{text:ed?"Editar produto":"Novo produto"}),
-L("Nome do produto",n),L("Categoria",c),L("Preço (ex: 199,90)",pr),L("Descrição",d),L("Link do pedido (opcional)",l),L("Foto (JPG, PNG ou WEBP até 3 MB)",fi),pv,
+L("Nome do produto",n),L("Categoria",c),L("Preço (ex: 199,90)",pr),L("Descrição",d),L("Link do pedido (opcional)",l),L("Foto do produto",h("div",{},h("div",{cls:"pick"},btnPc,btnDr,btnEd),fi,fn)),pv,
 h("label",{},a,"Visível na loja"),h("label",{},ft,"Destaque na vitrine (produtos em alta)"),m,
 h("div",{cls:"row"},h("button",{cls:"btn fill",text:"Salvar",onclick:async function(){
 var nm=n.value.trim(),ct=c.value.trim(),price=parseFloat((pr.value||"").replace(",",".")),lk=l.value.trim();m.className="msg";
+if(busy){m.textContent="Aguarde a foto terminar de carregar.";return}
 if(!nm||!ct||isNaN(price)||price<0){m.textContent="Preencha nome, categoria e um preço válido.";return}
 if(lk&&!/^https?:\/\//i.test(lk)){m.textContent="O link precisa começar com https://";return}
-if(f){if(f.size>3e6){m.textContent="Foto muito grande (máx. 3 MB).";return}
+if(f){if(f.size>MAXPHOTO){m.textContent="Foto muito grande (máx. 100 MB).";return}m.className="msg ok";m.textContent="Enviando a foto…";
 var path=crypto.randomUUID()+"."+((f.name.split(".").pop()||"jpg").toLowerCase()),u=await SB.storage.from("products").upload(path,f,{contentType:f.type});
-if(u.error){m.textContent="Falha ao enviar a foto.";return}img=SB.storage.from("products").getPublicUrl(path).data.publicUrl}
+if(u.error){m.className="msg";m.textContent="Falha ao enviar a foto: "+u.error.message+(/size|large|exceed/i.test(u.error.message)?" (o limite do Supabase Storage pode ser menor que 100 MB: ajuste em Storage > Settings)":"");return}m.textContent="";img=SB.storage.from("products").getPublicUrl(path).data.publicUrl}
 var row={name:nm,category:ct,price:price,description:d.value.trim()||null,link:lk||null,image_url:img,active:a.checked,featured:ft.checked};
 var r=ed?await SB.from("products").update(row).eq("id",p.id):await SB.from("products").insert(row);
 if(r.error){m.textContent="Não foi possível salvar.";return}
@@ -381,7 +535,10 @@ document.body.appendChild(ov)}
 var ST={pendente:"Pendente",pago:"Venda confirmada",cancelado:"Cancelado"},SC={pendente:"pe",pago:"",cancelado:"ca"};
 function grp(){var g={},ks=[];AD.o.forEach(function(o){var k=o.code||o.id;if(!g[k]){g[k]={code:o.code,rows:[],t:o.created_at};ks.push(k)}g[k].rows.push(o)});return ks.map(function(k){var x=g[k];x.total=sum(x.rows);x.status=x.rows[0].status;x.ids=x.rows.map(function(o){return o.id});return x})}
 async function setSt(g,st){var r=await SB.from("orders").update({status:st}).in("id",g.ids);if(r.error){showErr(r.error.message);return}await admLoad()}
-async function delOrd(ids,msg){if(!ids.length||!confirm(msg))return;var r=await SB.from("orders").delete().in("id",ids);if(r.error){showErr(r.error.message);return}await admLoad()}
+async function delOrd(ids,msg){if(!ids.length)return;if(!(await askC(msg)))return;
+var r=await SB.from("orders").delete({count:"exact"}).in("id",ids);
+if(r.error||!r.count){failBox("O banco não deixou apagar",(r.error?"Erro do banco: "+r.error.message:"O banco recusou a exclusão (falta permissão).")+" Você pode tirar da lista agora (fica escondido só neste aparelho) e, para apagar de verdade, rodar o SQL abaixo no Supabase.",r.error?null:sqlDel("orders"),{text:"Tirar da lista agora",fn:async function(){hideOrd(ids);toast("Removido da lista");await admLoad()}});return}
+toast(r.count>1?"Pedidos excluídos":"Pedido excluído");await admLoad()}
 async function autoClean(){var d=S.cfg&&S.cfg.auto_clean_days;d=d==null?7:+d;if(!d)return;var r=await SB.from("orders").delete().in("status",["pendente","cancelado"]).lt("created_at",new Date(Date.now()-d*864e5).toISOString()).select("id");if(!r.error&&r.data&&r.data.length)toast(r.data.length+" pedidos antigos descartados")}
 function viewPed(v){
 var G=grp(),days=(S.cfg&&S.cfg.auto_clean_days)?+S.cfg.auto_clean_days:7,cut=Date.now()-days*864e5,n={all:G.length,pendente:0,pago:0,cancelado:0};
@@ -414,13 +571,13 @@ $("ann").textContent=c.announce||"";$("ann").classList.toggle("hide",!c.announce
 
 var f=$("ft");f.innerHTML="";
 function col(t,it){it=it.filter(Boolean);if(!it.length)return;var d=h("div",{},h("h4",{text:t}));it.forEach(function(x){d.appendChild(x)});f.appendChild(d)}
-function ln(l,u){return lk(u)?h("a",{href:u,target:"_blank",rel:"noopener",text:l}):null}
+function ln(l,u){return lk(u)?h("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:l}):null}
 
 col("Contato",[c.email?h("a",{href:"mailto:"+c.email,text:c.email}):null,c.address?h("p",{text:c.address}):null,c.hours?h("p",{text:c.hours}):null]);
 var so=$("soc");so.innerHTML="";
-[["Instagram",c.instagram==null?DEF_IG:c.instagram,1],["TikTok",c.tiktok==null?DEF_TT:c.tiktok,1],["Facebook",c.facebook,0]].forEach(function(x){if(lk(x[1]))so.appendChild(h("a",{cls:"btn sm ghost",href:x[1],target:"_blank",rel:"noopener",text:x[0]+(x[2]?" @"+x[1].replace(/\/+$/,"").split("/").pop().replace(/^@/,""):"")}))});
+[["Instagram",c.instagram==null?DEF_IG:c.instagram,1],["TikTok",c.tiktok==null?DEF_TT:c.tiktok,1],["Facebook",c.facebook,0]].forEach(function(x){if(lk(x[1]))so.appendChild(h("a",{cls:"btn sm ghost",href:x[1],target:"_blank",rel:"noopener noreferrer",text:x[0]+(x[2]?" @"+x[1].replace(/\/+$/,"").split("/").pop().replace(/^@/,""):"")}))});
 col("Pagamento e entrega",[c.payments?h("p",{text:"Pagamento: "+c.payments}):null,c.shipping?h("p",{text:"Entrega: "+c.shipping}):null]);
-$("cp").textContent="© 2026 "+n+". "+(c.footer_text||"Todos os direitos reservados.")+" ";$("cp").appendChild(h("small",{style:"opacity:.5",text:"v9"}))}
+$("cp").textContent="© 2026 "+n+". "+(c.footer_text||"Todos os direitos reservados.")+" ";$("cp").appendChild(h("small",{style:"opacity:.5",text:"v10"}))}
 var SPEC=[["Identidade da loja",[["store_name","Nome da loja","t"],["hero_text","Slogan / texto da página inicial","t"],["announce","Aviso no topo do site (ex: Frete grátis hoje)","t"]]],
 ["Contato e atendimento",[["whatsapp","WhatsApp (DDI + DDD + número)","n"],["wa_message","Mensagem inicial do pedido no WhatsApp ({loja} vira o nome da loja)","a"],["email","E-mail de contato","t"],["address","Endereço","t"],["hours","Horário de atendimento","t"]]],
 ["Redes sociais",[["instagram","Instagram (@usuário ou link)","u"],["tiktok","TikTok (@usuário ou link)","u"],["facebook","Facebook (@página ou link)","u"]]],
